@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://github.qualcomm.com/pages/bchintal/VulQan/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+     <title>Vulcan</title>
+
+    <link rel="stylesheet" href="../../stylesheets/styles.css">
+    <link rel="stylesheet" href="../../stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  <style type="text/css"></style></head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Vulcan</h1>
+        <p>APPS Thermal Profiling Framework </p>
+
+      </header>
+      <section>
+      <p>This project was developed for Qualcomm, source code cannot be shared</p>
+<p>Vulcan is Bare-Metal OctaCore platform to run Thermal Mitigation Algorithms. The team I work for works without any an OS( Android ) in most of the cases, the motivation behind this project was to evaluate the hardware without any other system imposed on top of it.</p>
+
+<p>The features provided are :</p>
+
+<pre><code>Multi-Core Hotplugging
+DCVS per Cluster
+RealTime Visualization
+High Frequency Logging 
+xml based Throttling Algorithm syntax and parsing
+Offline comparative analysis of Algorithms
+Multi-Sensor StateMachines for Throttling Algorithms
+QBlizzard is the only benchmark supported 
+Virtual corners support     
+</code></pre>
+
+<p>Demonstration : </p>
+
+<p>Thermal mitigation algorithms can influence the system either by taking cores offline or by cutting down on the Voltage/Frequency of the systems' operation. This demonstration tries to showcase the effect of manipulating these knobs on the systems' overall temperature. </p>
+
+<p>The temperature profile was captured in real time from the chip on which the algorithm was being exercised </p>
+
+<p><img src="../../images/vulcan.gif" alt="Mitigation through Hot-Plugging"></p>
+
+<p>Details on the representation above :</p>
+
+<p>Cores in Green are online, while the ones in Grey are offline and the one in Red is the Master Core which handles this system. </p>
+
+<p>Green Dashed Line : is representative of the number of cores online at any given point in time</p>
+
+<p>Red Line : is the Temperature of this system in *C </p>
+
+<p>Blue Dashed Line : is the representative of the instant when Frequency of the system was changed </p>
+      </section>
+    </div>
+    <script src="./Vulcan by bchintal_files/scale.fix.js"></script>
+    
+  
+</body></html>
+

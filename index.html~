@@ -60,8 +60,7 @@
         </p>
 
         <p class="pub-item">
-          <div class="pub-title">OpticalFlow over VideoStream
-            [<a href="docs/optflow/optflow.html">Link</a>]</div>
+          <div class="pub-title">OpticalFlow over VideoStream</div>
 	 Movement detection using an Android Phone's Camera
         </p>
 

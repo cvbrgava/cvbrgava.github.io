@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://github.qualcomm.com/pages/bchintal/VulQan/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+     <title>IMU over IP</title>
+
+    <link rel="stylesheet" href="../../stylesheets/styles.css">
+    <link rel="stylesheet" href="../../stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  <style type="text/css"></style></head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>IMU over IP</h1>
+        <p>Sensor Fusion with an Android Phone </p>
+
+      </header>
+      <section>
+<p>This project was of interest to me ever since I had come across IMU systems. While at college the only way to play around with sensor fusion was to get expensive sensors from Sparkfun and then integrate them. However, with the advent of the Smart-phone, these sensors namely the Accelerometers, Gyroscopes and Magnetometers come bundled with the system. </p>
+
+<p>Now that every phone has all the sensors integrated to it, it is only a matter of accessing this data and making it available to the external world. I achieved this using an Android app, which sets up a server on the phone and can be queried to broadcast specific data pertaining to the phone's sensors. </p>
+
+<p>This setup now ensures that the data which was previously available locally ( only on the phone ) is now available to any computer on the internet. </p>
+
+<p> With the ideas suggested by this paper[<a href="https://gentlenav.googlecode.com/files/DCMDraft2.pdf">Link</a>], I went ahead and fused the data coming in from all three sensors, to develop the phone's current basis with respect to earths' frame of reference. I then use this basis to transform a wire-mesh cuboid ( representative of the phone ) into this basis, thereby replicating the orientation of the phone </p>
+  
+<h3>Demonstration : </h3>
+
+<p></p>
+
+<p><img src="../../images/ipimu.gif" alt="Mitigation through Hot-Plugging"></p>
+
+<p>I have tried extending this project to find trajectory of the phone under consideration, however the gyro drift being too high led to un-usable data </p>
+
+      </section>
+    </div>
+    <script src="./Vulcan by bchintal_files/scale.fix.js"></script>
+    
+  
+</body></html>
+

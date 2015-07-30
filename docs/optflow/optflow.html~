@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://github.qualcomm.com/pages/bchintal/FAT32SD/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Optical Flow</title>
+
+    <link rel="stylesheet" href="../../stylesheets/styles.css">
+    <link rel="stylesheet" href="../../stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  <style type="text/css"></style></head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>OpticalFlow over VideoStream</h1>
+        <p>Motion Detection with Android Phone Camera</p>
+
+
+      </header>
+      <section>
+<p>I was approached with a problem statement of finding and correcting lateral drift in a drone. After some basic research, I had realized that most of the commercial drones go about doing this using the same principle as that of an optical mouse </p>
+
+<p>I decided to try out the LucasKanade Optical Flow Algorithm as provided by OpenCV. The only question left unanswered was, how do I connect to a camera to validate the motion detection aspect. THis is when an idea from an older IMU over IP came to the rescue, I installed an mjpeg server on the phone to dish out camera frames.  </p>
+
+<p>With this data available, I could now run the LucasKanade Algorithm on the camera frames coming out of the phone to find motion of the camera.</p>
+
+<h3>Demonstration :</h3>
+
+<p><img src="../../images/fat32.jpg" alt=""></p>
+
+      </section>
+    </div>
+    <script src="./Fat32sd by bchintal_files/scale.fix.js"></script>
+    
+  
+</body></html>
