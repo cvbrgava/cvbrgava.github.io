@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://github.qualcomm.com/pages/bchintal/FAT32SD/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Unity3D</title>
+
+    <link rel="stylesheet" href="../../stylesheets/styles.css">
+    <link rel="stylesheet" href="../../stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  <style type="text/css"></style></head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>SnowGlobe in Unity3D</h1>
+        <p>Simulating Multi-body Collisions with a Physics Engine</p>
+
+
+      </header>
+      <section>
+      <p>I recently got introduced to Unity3D, which happens to be a well respected environment to make games, what makes it powerful is an extremely configurable wrapper written around its core physics engine.  </p>
+
+<p> In the process of getting used to it, I managed to finish the basic tutorial that has been put up on Unity's website. I was fishing around for some ideas that could be implemented and would give me an opportunity to explore more of Unity's features.   </p>
+
+<p>Inspired by Jake Vanderplas' matplotlib simulation of having multiple elastic balls dropped into a 2D box, I decided to do something similar albeit in a 3D environment. A few hours of stumbing around the framework did pay off with something that I had imagined earlier.   </p>
+
+
+<h3>Demonstration :</h3>
+<p> A cloud of spheres of same mass get initialized at random locations, with random vectors assigned as velocity. There is gravity acting downwards, all collisions are elastic.  </p>
+<p><img src="../../images/unity.gif" alt=""></p>
+<p>A little summary of the concepts that I have managed to explore : </p>
+<h3>GameObjects :</h3>
+<p>Entities which are part of the game environment would be called GameObjects. Each object has a set of event triggered methods associated with it. Depending on the properties that have been chosen for this objects a subset of possible signals can be generated. </p>
+<p> </p>
+
+<h3>Rigid Bodies :</h3>
+<p>Entities which are subjected to physical laws. The engine would treat them as bodies whose boundaries are to be rendered without colliding with any other rigid body. In a case where such case were to arise, then the engine would raise a Collision Event. Collision Events can be captured by OnCollisionEntry methods in the aggressor object. </p>
+<p>Rigid Bodies are subjected to all the physical forces in the environment, this included gravity. One place where you wouldn't want gravity to be pulling the object down into a free fall is the base on which your game play has been designed. However, you want this surface to be a imprenetrable one from which game objects just don't slip off. So effectively, there are a few paradoxical game objects need to show properties of a rigid body while not being effected by the physical laws of the environment. Such objects are called Kinematic bodies, which do trigger Collision Interrupt to the aggressor but don't drop off in presence of gravity. </p>
+
+<h3>Trigger :</h3>
+<p>Trigger is a rendering option passed down to the physics engine. Unlike the rigid bodies, entities which can be trigger rendered, can have their boundaries violated while rendering. However, the triggered object would raise a OnTriggerEnter with the object that is violation its boundaries.  </p>
+<p>There is atleast one scenario that can be used to demonstrate the utility of "Trigger". Assume that we have a single player game, where the player is walking from one room to another. In this case the game engine would like to track the player and render his surroundings according to the game plan.  In such cases you can mark all the doors as Trigger objects, which would imply that the physics engine would let other objects violate the door's physical boundaries, but while doing so would raise a Trigger Interrupt with the aggressor.  </p>
+<p>The player receives a Trigger that he has crossed a particular door and the game engine would then manipulate his scene accordingly, probably change the room he is looking into/ give him some points/ provide a checkpoint to save his progress etc </p>
+
+<h3> Collision : </h3>
+<p>Collision is natural contruct that follows the rigid body idea. In this case the rendering engine understands that when two rigid bodies collide, they can't violate each others boundaries. The moment two rigid bodies manage to collide the system would interrupt both of them with the OnCollisionEnter method. </p>
+
+
+
+      </section>
+    </div>
+    <script src="./Fat32sd by bchintal_files/scale.fix.js"></script>
+    
+  
+</body></html>

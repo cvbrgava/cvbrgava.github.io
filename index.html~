@@ -42,6 +42,24 @@
         </p>
 
         <p class="pub-item">
+          <div class="pub-title">IMU over IP
+            [<a href="docs/ipimu/ipimu.html">Link</a>]</div>
+	IMU built using server installed on an Android Phone	
+        </p>
+
+        <p class="pub-item">
+          <div class="pub-title">OpticalFlow over VideoStream
+            [<a href="docs/optflow/optflow.html">Link</a>]</div>
+	 Movement detection using an Android Phone's Camera
+        </p>
+
+        <p class="pub-item">
+          <div class="pub-title">SnowGlobe0.1
+            [<a href="docs/unity/unity.html">Link</a>]</div>
+    	Project based on the Unity Physics Engine
+        </p>
+
+        <p class="pub-item">
           <div class="pub-title">FAT32 drivers
             [<a href="docs/fat/fat.html">Link</a>]
 	</div>
@@ -53,16 +71,6 @@
          Basic implementation of an OS  
         </p>
 
-        <p class="pub-item">
-          <div class="pub-title">IMU over IP
-            [<a href="docs/ipimu/ipimu.html">Link</a>]</div>
-	IMU built using server installed on an Android Phone	
-        </p>
-
-        <p class="pub-item">
-          <div class="pub-title">OpticalFlow over VideoStream</div>
-	 Movement detection using an Android Phone's Camera
-        </p>
 
         <p class="pub-item">
           <div class="pub-title">Model Order Reduction
