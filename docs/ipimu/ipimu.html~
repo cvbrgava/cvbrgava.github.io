@@ -32,7 +32,7 @@
 
 <p></p>
 
-<p><img src="../../images/ipimu.gif" alt="Mitigation through Hot-Plugging"></p>
+<p><img src="../../images/IMU.gif" alt="Mitigation through Hot-Plugging"></p>
 
 <p>I have tried extending this project to find trajectory of the phone under consideration, however the gyro drift being too high led to un-usable data </p>
 
