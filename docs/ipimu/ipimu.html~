@@ -16,7 +16,7 @@
     <div class="wrapper">
       <header>
         <h1>IMU over IP</h1>
-        <p>Sensor Fusion with an Android Phone </p>
+        <p>Sensor Fusion to estimate Rotation basis with an Android Phone </p>
 
       </header>
       <section>
@@ -32,9 +32,40 @@
 
 <p></p>
 
-<p><img src="../../images/IMU.gif" alt="Mitigation through Hot-Plugging"></p>
+<figure><img src="../../images/IMU.gif" alt="Mitigation through Hot-Plugging">
+<figcaption>Demonstration of the IMU.</figcaption>
+</figure>
+<p>To get this project to the above state, there were a few intermediatery steps required.</p>
 
-<p>I have tried extending this project to find trajectory of the phone under consideration, however the gyro drift being too high led to un-usable data </p>
+<p>First step was to get Rotation Basis into action, this is an idea anyone with an introduction to Linear Algebra would have an intuition for.However, I had never seen it myself as a simulation. So I got a wireframe cuboid in the Identity basis, then started rotating this basis about the X axis with a monotonous increase of the angle. </p>
+
+<figure><img src="../../images/ipimu.gif" alt="Mitigation through Hot-Plugging">
+<figcaption>Getting Rotation Basis to work.</figcaption>
+</figure>
+<p> With this infrastructure in place, I had to implement the above mentioned paper and poll the server to dish-out required sensor values. This was enough to get the demonstration working. <p> 
+<p> What I tried to do next was to see if position tracking could work. The math behind getting this feature to work is pretty simple.</p>
+<ul>
+  <li>The IMU gives me acceleration in the phone's basis, with the current infrastructure I know this basis exactly.</li>
+  <li>All that I had to do was to convert this acceleration into Earth's basis, then remove the ever present G component</li>
+  <li>Assuming constant acceleration for a small duration calculate displacement generated. Then add this displacement vectorially</li>
+  
+  <img src="../../images/traj.png" alt="Mitigation through Hot-Plugging">
+</ul>
+
+<p> Intuitively this is supposed to work, but the results turned out otherwise. I believe there are few reaasons for this to happen </p>
+<ul>
+  <li>Removing G from Acceleration introduces numerical errors.</li>
+  <li>This is a feedforward system, with no means of correcting it</li>
+  <li>The errors pile up and give an impression of false displacement</li>
+  
+</ul>
+<figure><img src="../../images/phantomdisp.png" alt="Mitigation through Hot-Plugging">
+<figcaption>Numerical error induced displacement despite phone being stationary.</figcaption>
+</figure>
+
+<p>In conclusion, calculating abstract orientation from just sensor fusion is works fine. However, trying to use this data to calculate positioning without any feedback loop is prone to high numerical error. </p>
+
+
 
       </section>
     </div>
