@@ -21,7 +21,7 @@
       </header>
       <section>
       <p>This project was developed for Qualcomm, source code cannot be shared</p>
-      <p><b>Vulcan's poster presented at the Qualcomm Thermal Summit 2015, San Diego</b> Qualcomm Thermal Summit is a conference focusing on QCT chipset thermal solutions, discussing how the thermal performance of QCT chipsets compares to other industry leaders solutions and getting valuable insights into some of the design initiatives under way. </p>
+      <p><b>Vulcan's poster presented at the Qualcomm Thermal Summit 2015, San Diego</b> Qualcomm Thermal Summit is a conference focusing on QCT chipset thermal solutions and provides a platform to discuss design initiatives under way. </p>
 <p>Vulcan is Bare-Metal OctaCore platform to run Thermal Mitigation Algorithms. The team I work for works without any an OS( Android ) in most of the cases, the motivation behind this project was to evaluate the hardware without any other system imposed on top of it.</p>
 
 <p>The features provided are :</p>
